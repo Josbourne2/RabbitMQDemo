@@ -11,3 +11,8 @@ Next, run the following statement to start a rabbitmq container: ```docker run -
 After you have performed these steps you can login to the RabbitMQ management interface on localhost:15672 and login with user guest and password guest.
 This will allow you to see statistics, just go through the interface and find out where you can see the queues that exist and what their parameters are. Play around with creating new queues and google the parameter settings.
 
+The queues we are using in this demo will be created automatically, you do not have to create them beforehand. More importantly:
+**When you initialize a queue in your code it will not change settings of a queue with the same name if you have created it beforehand**
+
+### Start the API thingie
+
