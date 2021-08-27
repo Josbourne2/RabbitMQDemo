@@ -31,11 +31,9 @@ namespace RabbitMQDemo.Entities
             {
                 using (var channel = _connection.CreateModel())
                 {
-                    
-                    
-                    
+
                     var body = Encoding.UTF8.GetBytes(message);
-                    channel.BasicPublish(exchange: "logs", routingKey: "hello", basicProperties: null, body: body, mandatory: true);
+                    channel.BasicPublish(exchange: "logs", routingKey: "IDon'tKnowRoutingKey", basicProperties: null, body: body, mandatory: true);
                 }
             }
         }
